@@ -1,4 +1,5 @@
 #include "wrap-hwlib.hpp"
+#include "MovingPlatform.hpp"
 
 int main() {
     WDT->WDT_MR = WDT_MR_WDDIS;
