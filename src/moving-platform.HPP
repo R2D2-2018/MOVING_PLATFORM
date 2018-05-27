@@ -8,7 +8,7 @@
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
 
-namespace MovingPlatform{
+//namespace MovingPlatform{
     class Platform{
         ///This is designed to break. waiting for motorcontroller to 
         //? & leftMotor;
@@ -35,6 +35,6 @@ namespace MovingPlatform{
         int getOffset();
         int getSmoothing();
     };
-};
+//}
 
 #endif //MOVING_PLATFORM_HPP
