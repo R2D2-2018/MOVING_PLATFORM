@@ -1,29 +1,29 @@
 #include "moving-platform.hpp"
 #include "wrap-hwlib.hpp"
-//namespace MovingPlatform{
-	//Platform(? & leftMotor, ? & rightMotor):
-	//leftMotor(leftMotor), rightMotor(rightMotor)
-	Platform::Platform()
+namespace MovingPlatform{
+
+	Platform::Platform(MotorController::MotorInterface & leftMotor, MotorController::MotorInterface & rightMotor):
+	leftMotor(leftMotor), rightMotor(rightMotor)
 	{
 		wheelsize = 60;
 		offset = 0;
 		smoothing = 15;
     }
 	
-	void Platform::move(int speed){
+	void Platform::move(uint8_t speed){
 		if(speed > 100 || speed < -100){
 			return;
 		}
 
 	}
 
-	void Platform::move(int speed, int turn){
+	void Platform::move(uint8_t speed, uint8_t turn){
 		if(speed > 100 || speed < -100){
 			return;
 		}
 	}
 
-	void Platform::moveDistance(int distance, int speed){
+	void Platform::moveDistance(uint8_t distance, uint8_t speed){
 		if(speed > 100 || speed < -100){
 			return;
 		}
@@ -32,13 +32,13 @@
 		}
 	}
 
-	void Platform::rotate(int deg){
+	void Platform::rotate(uint8_t deg){
 		if(deg > 360 || deg < -360){
 			return;
 		}
 	}
 
-	void Platform::rotate(int deg, int speed){
+	void Platform::rotate(uint8_t deg, uint8_t speed){
 		if(deg > 360 || deg < -360 || speed > 100 || speed < -100){
 			return;
 		}
@@ -50,29 +50,29 @@
 
 
 	//SET AND GET
-	void Platform::setWheelsize(int mm){
+	void Platform::setWheelsize(uint8_t mm){
 		wheelsize = mm;
 	}
 
-	void Platform::setOffset(int value){
+	void Platform::setOffset(uint8_t value){
 		offset = value;
 	}
 
-	void Platform::setSmoothing(int value){
+	void Platform::setSmoothing(uint8_t value){
 		smoothing = value;
 	}
 
-	int Platform::getWheelsize(){
+	uint8_t Platform::getWheelsize(){
 		return wheelsize;
 	}
 	
-	int Platform::getOffset(){
+	uint8_t Platform::getOffset(){
 		return offset;
 	}
 
-	int Platform::getSmoothing(){
+	uint8_t Platform::getSmoothing(){
 		return smoothing;
 	}
 
 
-//};
+};
