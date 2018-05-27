@@ -20,10 +20,10 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../../../libraries/hwlib/library"
-  "../../../libraries/Catch2/single_include"
-  "../../../toolchain/targets/arm32/cm3/deps"
-  "../../../toolchain/targets/arm32/cm3/atmel/sam3x/deps"
+  "C:/ti-software/R2D2/Build-environment/libraries/hwlib/library"
+  "C:/ti-software/R2D2/Build-environment/libraries/Catch2/single_include"
+  "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/deps"
+  "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/atmel/sam3x/deps"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/src/libc-stub.cpp" "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/arduino-template.elf.dir/src/libc-stub.cpp.obj"
@@ -43,10 +43,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../../libraries/hwlib/library"
-  "../../../libraries/Catch2/single_include"
-  "../../../toolchain/targets/arm32/cm3/deps"
-  "../../../toolchain/targets/arm32/cm3/atmel/sam3x/deps"
+  "C:/ti-software/R2D2/Build-environment/libraries/hwlib/library"
+  "C:/ti-software/R2D2/Build-environment/libraries/Catch2/single_include"
+  "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/deps"
+  "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/atmel/sam3x/deps"
   )
 
 # Targets to which this target links.
