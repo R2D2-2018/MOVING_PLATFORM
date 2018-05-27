@@ -11,20 +11,20 @@
     }
 	
 	void Platform::move(int speed){
-		if(speed > 255 || speed < -255){
+		if(speed > 100 || speed < -100){
 			return;
 		}
 
 	}
 
 	void Platform::move(int speed, int turn){
-		if(speed > 255 || speed < -255){
+		if(speed > 100 || speed < -100){
 			return;
 		}
 	}
 
 	void Platform::moveDistance(int distance, int speed){
-		if(speed > 255 || speed < -255){
+		if(speed > 100 || speed < -100){
 			return;
 		}
 		if((distance > 0 && speed < 0) || (distance < 0 && speed > 0)){
@@ -39,7 +39,7 @@
 	}
 
 	void Platform::rotate(int deg, int speed){
-		if(deg > 360 || deg < -360 || speed > 255 || speed < -255){
+		if(deg > 360 || deg < -360 || speed > 100 || speed < -100){
 			return;
 		}
 	}
