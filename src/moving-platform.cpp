@@ -10,20 +10,20 @@ namespace MovingPlatform{
 		smoothing = 15;
     }
 	
-	void Platform::move(uint16_t speed){
+	void Platform::move(short speed){
 		if(speed > 255 || speed < -255){
 			return;
 		}
 
 	}
 
-	void Platform::move(uint16_t speed, uint16_t turn){
+	void Platform::move(short speed, short turn){
 		if(speed > 255 || speed < -255){
 			return;
 		}
 	}
 
-	void Platform::moveDistance(uint16_t distance, uint16_t speed){
+	void Platform::moveDistance(short distance, short speed){
 		if(speed > 255 || speed < -255){
 			return;
 		}
@@ -32,13 +32,13 @@ namespace MovingPlatform{
 		}
 	}
 
-	void Platform::rotate(uint16_t deg){
+	void Platform::rotate(short deg){
 		if(deg > 360 || deg < -360){
 			return;
 		}
 	}
 
-	void Platform::rotate(uint16_t deg, uint16_t speed){
+	void Platform::rotate(short deg, short speed){
 		if(deg > 360 || deg < -360 || speed > 255 || speed < -255){
 			return;
 		}
@@ -50,27 +50,27 @@ namespace MovingPlatform{
 
 
 	//SET AND GET
-	void Platform::setWheelsize(uint16_t mm){
+	void Platform::setWheelSize(short mm){
 		wheelsize = mm;
 	}
 
-	void Platform::setOffset(uint16_t value){
+	void Platform::setOffset(short value){
 		offset = value;
 	}
 
-	void Platform::setSmoothing(uint16_t value){
+	void Platform::setSmoothing(short value){
 		smoothing = value;
 	}
 
-	uint16_t Platform::getWheelsize(){
+	short Platform::getWheelSize(){
 		return wheelsize;
 	}
 
-	uint16_t Platform::getOffset(){
+	short Platform::getOffset(){
 		return offset;
 	}
 
-	uint16_t Platform::getSmoothing(){
+	short Platform::getSmoothing(){
 		return smoothing;
 	}
 
