@@ -4,9 +4,9 @@
  * @author    Olivier verwoerd & Maarten Wassenaar
  * @license   See LICENSE
  */
+
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
-#include "motor_interface.hpp"
 
 namespace MovingPlatform{
     /**
@@ -16,25 +16,17 @@ namespace MovingPlatform{
      */
     class Platform{
         ///This is designed to break. waiting for motorcontroller to 
-        MotorController::MotorInterface & leftMotor;
-        MotorController::MotorInterface & rightMotor; 
-        uint8_t currentSpeedLeft, currentSpeedRight;
-        uint8_t wheelsize;
-        uint8_t offset;
-        uint8_t smoothing;
+        //? & leftMotor;
+        //? & rightMotor; 
+        uint16_t currentSpeedLeft, currentSpeedRight;
+        uint16_t wheelsize;
+        uint16_t offset;
+        uint16_t smoothing;
         public:
-        Platform(MotorController::MotorInterface & leftMotor, MotorController::MotorInterface & rightMotor);
+        //Platform(? & leftMotor, ? & rightMotor); 
+        Platform();
 
-        /**
-         * @brief move
-         * Set the platform to move forward or backward.
-         * Forward is a positive value
-         * Backward is a negative value
-         * 
-         * @param[in] speed in a range 255 to -255
-         * @param[out] set speed of motorcontrollers.
-         */
-        void move(uint8_t speed);
+        void move(uint16_t speed);
         /**
          * @brief move with turn
          * 
@@ -43,7 +35,7 @@ namespace MovingPlatform{
          * @param[in] turn ratio devided by 10
          * @param[out] set speed of motorcontrollers.
          */
-        void move(uint8_t speed, uint8_t turn);
+        void move(uint16_t speed, uint16_t turn);
       	/**
          * @brief move a certain distance if motor supports distance
          * 
@@ -51,7 +43,7 @@ namespace MovingPlatform{
          * @param[in] speed in a range 255 to -255
          * @param[out] set speed of motorcontrollers.
          */
-        void moveDistance(uint8_tuint8_t distance, uint8_tuint8_t speed);
+        void moveDistance(uint16_t distance, uint16_t speed);
       	/**
          * @brief rotate
          * 
@@ -60,7 +52,7 @@ namespace MovingPlatform{
          * @param[in] rotation in ##UNDEFINED unless servo than deg.
          * @param[out] set speed of motorcontrollers.
          */
-        void rotate(uint8_t deg);
+        void rotate(uint16_t deg);
 		/**
          * @brief rotate
          * 
@@ -68,7 +60,7 @@ namespace MovingPlatform{
          * @param[in] Custom speed. otherwise half speed
          * @param[out] set speed of motorcontrollers.
          */
-        void rotate(uint8_t deg, uint8_t speed);
+        void rotate(uint16_t deg, uint16_t speed);
       	/**
          * @brief Stop
          * 
@@ -84,39 +76,37 @@ namespace MovingPlatform{
          * 
          * @param[in] set wheelsize in mm
          */
-        void setWheelSize(uint8_t mm);
+        void setWheelSize(uint16_t mm);
       	/**
          * @brief getOffset
          * 
          * @param[in] set offset of motorcontroller in ##UNDEFINED.
          */
-        void setOffset(uint8_t value);
+        void setOffset(uint16_t value);
       	/**
          * @brief getSmoothing
          * 
          * @param[in] set smoothing of motors in second/10.
          */
-        void setSmoothing(uint8_t value);
+        void setSmoothing(uint16_t value);
       	/**
          * @brief getWheelSize
          * 
          * @return wheelsize in mm
          */
-        uint8_t getWheelSize();
+        uint16_t getWheelSize();
       	/**
          * @brief getOffset
          * 
          * @return offset of motorcontroller in ##UNDEFINED.
          */
-        uint8_t getOffset();
+        uint16_t getOffset();
       	/**
          * @brief getSmoothing
          * 
          * @return smoothing of motors in second/10.
          */
-        uint8_t getSmoothing();
-      	
-      	
+        uint16_t getSmoothing();
     };
 }
 
