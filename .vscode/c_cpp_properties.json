@@ -51,9 +51,13 @@
                 "C:/Program Files/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/.3.0//nclude//c++",
                 "C:/Program Files/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/x86_64-w64-mingw32",
                 "C:/Program Files/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++",
-                "C:/Program Files/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/tr1"
+                "C:/Program Files/mingw-w64/mingw64/lib/gcc/x86_64-w64-mingw32/6.3.0/include/c++/tr1",
+                "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/atmel/sam3x/deps",
+                "C:/ti-software/R2D2/Build-environment/toolchain/targets/arm32/cm3/atmel/deps"
             ],
             "defines": [
+                "BMPTK_TARGET_arduino_due",
+                "BMPTK_TARGET=arduino_due",
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
@@ -76,5 +80,5 @@
             "cppStandard": "c++17"
         }
     ],
-    "version": 3
+    "version": 4
 }
