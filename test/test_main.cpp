@@ -6,15 +6,15 @@ TEST_CASE( "Get and set" ) {
     MovingPlatform::Platform test;
     test.setOffset(10);
     test.setSmoothing(10);
-    test.setWheelsize(10);
+    test.setWheelSize(10);
     REQUIRE(test.getOffset() == 10);
     REQUIRE(test.getSmoothing() == 10);
-    REQUIRE(test.getWheelsize() == 10);
+    REQUIRE(test.getWheelSize() == 10);
     test.setOffset(2);
     test.setSmoothing(2);
-    test.setWheelsize(2);
+    test.setWheelSize(2);
     REQUIRE(test.getOffset() == 2);
     REQUIRE(test.getSmoothing() == 2);
-    REQUIRE(test.getWheelsize() == 2);
+    REQUIRE(test.getWheelSize() == 2);
 }
 
