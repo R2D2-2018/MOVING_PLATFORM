@@ -1,5 +1,5 @@
 The target system is: Generic -  - 
-The host system is: Windows - 10.0.16299 - AMD64
+The host system is: Windows - 10.0.17134 - AMD64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe 
 Build flags: 
@@ -11,39 +11,39 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
 
-The CXX compiler identification is GNU, found in "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/3.10.1/CompilerIdCXX/CMakeCXXCompilerId.o"
+The CXX compiler identification is GNU, found in "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/3.11.1/CompilerIdCXX/CMakeCXXCompilerId.o"
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_388a3/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_388a3.dir\build.make CMakeFiles/cmTC_388a3.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_388a3.dir/CMakeCXXCompilerABI.cpp.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE     -o CMakeFiles\cmTC_388a3.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
-Linking CXX static library libcmTC_388a3.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_388a3.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_388a3.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_388a3.a  CMakeFiles/cmTC_388a3.dir/CMakeCXXCompilerABI.cpp.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_388a3.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_c5b5e/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_c5b5e.dir/build.make CMakeFiles/cmTC_c5b5e.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"     -o CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCXXCompilerABI.cpp"
+Linking CXX static library libcmTC_c5b5e.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_c5b5e.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_c5b5e.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_c5b5e.a  CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_c5b5e.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-none-eabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_388a3/fast"]
-  ignore line: [C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_388a3.dir\build.make CMakeFiles/cmTC_388a3.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_388a3.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE     -o CMakeFiles\cmTC_388a3.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"]
-  ignore line: [Linking CXX static library libcmTC_388a3.a]
-  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_388a3.dir\cmake_clean_target.cmake]
-  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_388a3.dir\link.txt --verbose=1]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_388a3.a  CMakeFiles/cmTC_388a3.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_388a3.a]
-  ignore line: [mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
+  ignore line: [Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_c5b5e/fast"]
+  ignore line: [C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_c5b5e.dir/build.make CMakeFiles/cmTC_c5b5e.dir/build]
+  ignore line: [make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"     -o CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX static library libcmTC_c5b5e.a]
+  ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_c5b5e.dir/cmake_clean_target.cmake]
+  ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_c5b5e.dir/link.txt --verbose=1]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_c5b5e.a  CMakeFiles/cmTC_c5b5e.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_c5b5e.a]
+  ignore line: [make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
   ignore line: []
   implicit libs: []
   implicit dirs: []
@@ -55,17 +55,17 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_ae497/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_ae497.dir\build.make CMakeFiles/cmTC_ae497.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ae497.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE    -std=c++1z -o CMakeFiles\cmTC_ae497.dir\feature_tests.cxx.obj -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.cxx
-Linking CXX static library libcmTC_ae497.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_ae497.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ae497.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_ae497.a  CMakeFiles/cmTC_ae497.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_ae497.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_f8371/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_f8371.dir/build.make CMakeFiles/cmTC_f8371.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f8371.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"    -std=c++1z -o CMakeFiles/cmTC_f8371.dir/feature_tests.cxx.obj -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_f8371.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_f8371.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_f8371.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_f8371.a  CMakeFiles/cmTC_f8371.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_f8371.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -130,17 +130,17 @@ mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/mo
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_c4bc2/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_c4bc2.dir\build.make CMakeFiles/cmTC_c4bc2.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c4bc2.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE    -std=c++14 -o CMakeFiles\cmTC_c4bc2.dir\feature_tests.cxx.obj -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.cxx
-Linking CXX static library libcmTC_c4bc2.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_c4bc2.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c4bc2.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_c4bc2.a  CMakeFiles/cmTC_c4bc2.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_c4bc2.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_6896e/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_6896e.dir/build.make CMakeFiles/cmTC_6896e.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6896e.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"    -std=c++14 -o CMakeFiles/cmTC_6896e.dir/feature_tests.cxx.obj -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_6896e.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_6896e.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_6896e.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_6896e.a  CMakeFiles/cmTC_6896e.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_6896e.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -205,17 +205,17 @@ mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/mo
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_cc952/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_cc952.dir\build.make CMakeFiles/cmTC_cc952.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cc952.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE    -std=c++11 -o CMakeFiles\cmTC_cc952.dir\feature_tests.cxx.obj -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.cxx
-Linking CXX static library libcmTC_cc952.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_cc952.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cc952.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_cc952.a  CMakeFiles/cmTC_cc952.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_cc952.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_48ba6/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_48ba6.dir/build.make CMakeFiles/cmTC_48ba6.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_48ba6.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"    -std=c++11 -o CMakeFiles/cmTC_48ba6.dir/feature_tests.cxx.obj -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_48ba6.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_48ba6.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_48ba6.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_48ba6.a  CMakeFiles/cmTC_48ba6.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_48ba6.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -280,17 +280,17 @@ mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/mo
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_f717f/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_f717f.dir\build.make CMakeFiles/cmTC_f717f.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f717f.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR10B2~1.EXE    -std=c++98 -o CMakeFiles\cmTC_f717f.dir\feature_tests.cxx.obj -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.cxx
-Linking CXX static library libcmTC_f717f.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_f717f.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f717f.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_f717f.a  CMakeFiles/cmTC_f717f.dir/feature_tests.cxx.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_f717f.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_fa5fa/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_fa5fa.dir/build.make CMakeFiles/cmTC_fa5fa.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fa5fa.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-g++.exe"    -std=c++98 -o CMakeFiles/cmTC_fa5fa.dir/feature_tests.cxx.obj -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_fa5fa.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_fa5fa.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_fa5fa.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_fa5fa.a  CMakeFiles/cmTC_fa5fa.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_fa5fa.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -367,39 +367,39 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/3.10.1/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is GNU, found in "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/3.11.1/CompilerIdC/CMakeCCompilerId.o"
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_ab5b5/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_ab5b5.dir\build.make CMakeFiles/cmTC_ab5b5.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ab5b5.dir/CMakeCCompilerABI.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_ab5b5.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
-Linking C static library libcmTC_ab5b5.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_ab5b5.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ab5b5.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_ab5b5.a  CMakeFiles/cmTC_ab5b5.dir/CMakeCCompilerABI.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_ab5b5.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_dc5f2/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_dc5f2.dir/build.make CMakeFiles/cmTC_dc5f2.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gcc.exe"    -o CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCCompilerABI.c"
+Linking C static library libcmTC_dc5f2.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_dc5f2.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_dc5f2.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_dc5f2.a  CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_dc5f2.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-none-eabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_ab5b5/fast"]
-  ignore line: [C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_ab5b5.dir\build.make CMakeFiles/cmTC_ab5b5.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_ab5b5.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_ab5b5.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"]
-  ignore line: [Linking C static library libcmTC_ab5b5.a]
-  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_ab5b5.dir\cmake_clean_target.cmake]
-  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ab5b5.dir\link.txt --verbose=1]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_ab5b5.a  CMakeFiles/cmTC_ab5b5.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_ab5b5.a]
-  ignore line: [mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
+  ignore line: [Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_dc5f2/fast"]
+  ignore line: [C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_dc5f2.dir/build.make CMakeFiles/cmTC_dc5f2.dir/build]
+  ignore line: [make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gcc.exe"    -o CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/CMake/share/cmake-3.11/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Linking C static library libcmTC_dc5f2.a]
+  ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_dc5f2.dir/cmake_clean_target.cmake]
+  ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_dc5f2.dir/link.txt --verbose=1]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_dc5f2.a  CMakeFiles/cmTC_dc5f2.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_dc5f2.a]
+  ignore line: [make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp']
   ignore line: []
   implicit libs: []
   implicit dirs: []
@@ -411,17 +411,17 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_1e053/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_1e053.dir\build.make CMakeFiles/cmTC_1e053.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1e053.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR19DD~1.EXE   -std=c11 -o CMakeFiles\cmTC_1e053.dir\feature_tests.c.obj   -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.c
-Linking C static library libcmTC_1e053.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_1e053.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1e053.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_1e053.a  CMakeFiles/cmTC_1e053.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_1e053.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_fb775/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_fb775.dir/build.make CMakeFiles/cmTC_fb775.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb775.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gcc.exe"   -std=c11 -o CMakeFiles/cmTC_fb775.dir/feature_tests.c.obj   -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_fb775.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_fb775.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_fb775.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_fb775.a  CMakeFiles/cmTC_fb775.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_fb775.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -433,17 +433,17 @@ mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/mo
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_cd345/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_cd345.dir\build.make CMakeFiles/cmTC_cd345.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd345.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR19DD~1.EXE   -std=c99 -o CMakeFiles\cmTC_cd345.dir\feature_tests.c.obj   -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.c
-Linking C static library libcmTC_cd345.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_cd345.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cd345.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_cd345.a  CMakeFiles/cmTC_cd345.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_cd345.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_58b4f/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_58b4f.dir/build.make CMakeFiles/cmTC_58b4f.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58b4f.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gcc.exe"   -std=c99 -o CMakeFiles/cmTC_58b4f.dir/feature_tests.c.obj   -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_58b4f.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_58b4f.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_58b4f.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_58b4f.a  CMakeFiles/cmTC_58b4f.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_58b4f.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -455,17 +455,17 @@ mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/mo
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/TDM-GCC-32/bin/mingw32-make.exe" "cmTC_6c549/fast"
-C:/TDM-GCC-32/bin/mingw32-make.exe -f CMakeFiles\cmTC_6c549.dir\build.make CMakeFiles/cmTC_6c549.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6c549.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR19DD~1.EXE   -std=c90 -o CMakeFiles\cmTC_6c549.dir\feature_tests.c.obj   -c C:\ti-software\R2D2\Build-environment\modules\MOVING_PLATFORM\build\CMakeFiles\feature_tests.c
-Linking C static library libcmTC_6c549.a
-"C:\Program Files\CMake\bin\cmake.exe" -P CMakeFiles\cmTC_6c549.dir\cmake_clean_target.cmake
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_6c549.dir\link.txt --verbose=1
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\ARM-NO~2.EXE qc libcmTC_6c549.a  CMakeFiles/cmTC_6c549.dir/feature_tests.c.obj
-C:\PROGRA~2\GNUTOO~1\72017-~1\bin\AR17F9~1.EXE libcmTC_6c549.a
-mingw32-make.exe[1]: Leaving directory 'C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/SysGCC/arm-eabi/bin/make.exe" "cmTC_08bd1/fast"
+C:/SysGCC/arm-eabi/bin/make.exe -f CMakeFiles/cmTC_08bd1.dir/build.make CMakeFiles/cmTC_08bd1.dir/build
+make.exe[1]: Entering directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08bd1.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gcc.exe"   -std=c90 -o CMakeFiles/cmTC_08bd1.dir/feature_tests.c.obj   -c C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_08bd1.a
+"C:/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_08bd1.dir/cmake_clean_target.cmake
+"C:/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_08bd1.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ar.exe" qc libcmTC_08bd1.a  CMakeFiles/cmTC_08bd1.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-ranlib.exe" libcmTC_08bd1.a
+make.exe[1]: Leaving directory `C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
