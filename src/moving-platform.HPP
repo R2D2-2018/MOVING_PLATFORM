@@ -18,15 +18,15 @@ namespace MovingPlatform{
         ///This is designed to break. waiting for motorcontroller to 
         //? & leftMotor;
         //? & rightMotor; 
-        uint16_t currentSpeedLeft, currentSpeedRight;
-        uint16_t wheelsize;
-        uint16_t offset;
-        uint16_t smoothing;
+        short currentSpeedLeft, currentSpeedRight;
+        short wheelsize;
+        short offset;
+        short smoothing;
         public:
         //Platform(? & leftMotor, ? & rightMotor); 
         Platform();
 
-        void move(uint16_t speed);
+        void move(short speed);
         /**
          * @brief move with turn
          * 
@@ -35,7 +35,7 @@ namespace MovingPlatform{
          * @param[in] turn ratio devided by 10
          * @param[out] set speed of motorcontrollers.
          */
-        void move(uint16_t speed, uint16_t turn);
+        void move(short speed, short turn);
       	/**
          * @brief move a certain distance if motor supports distance
          * 
@@ -43,7 +43,7 @@ namespace MovingPlatform{
          * @param[in] speed in a range 255 to -255
          * @param[out] set speed of motorcontrollers.
          */
-        void moveDistance(uint16_t distance, uint16_t speed);
+        void moveDistance(short distance, short speed);
       	/**
          * @brief rotate
          * 
@@ -52,7 +52,7 @@ namespace MovingPlatform{
          * @param[in] rotation in ##UNDEFINED unless servo than deg.
          * @param[out] set speed of motorcontrollers.
          */
-        void rotate(uint16_t deg);
+        void rotate(short deg);
 		/**
          * @brief rotate
          * 
@@ -60,7 +60,7 @@ namespace MovingPlatform{
          * @param[in] Custom speed. otherwise half speed
          * @param[out] set speed of motorcontrollers.
          */
-        void rotate(uint16_t deg, uint16_t speed);
+        void rotate(short deg, short speed);
       	/**
          * @brief Stop
          * 
@@ -76,37 +76,37 @@ namespace MovingPlatform{
          * 
          * @param[in] set wheelsize in mm
          */
-        void setWheelSize(uint16_t mm);
+        void setWheelSize(short mm);
       	/**
          * @brief getOffset
          * 
          * @param[in] set offset of motorcontroller in ##UNDEFINED.
          */
-        void setOffset(uint16_t value);
+        void setOffset(short value);
       	/**
          * @brief getSmoothing
          * 
          * @param[in] set smoothing of motors in second/10.
          */
-        void setSmoothing(uint16_t value);
+        void setSmoothing(short value);
       	/**
          * @brief getWheelSize
          * 
          * @return wheelsize in mm
          */
-        uint16_t getWheelSize();
+        short getWheelSize();
       	/**
          * @brief getOffset
          * 
          * @return offset of motorcontroller in ##UNDEFINED.
          */
-        uint16_t getOffset();
+        short getOffset();
       	/**
          * @brief getSmoothing
          * 
          * @return smoothing of motors in second/10.
          */
-        uint16_t getSmoothing();
+        short getSmoothing();
     };
 }
 
