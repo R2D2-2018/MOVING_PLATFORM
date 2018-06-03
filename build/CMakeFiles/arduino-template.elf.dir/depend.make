@@ -93,7 +93,13 @@ CMakeFiles/arduino-template.elf.dir/src/libc-stub.cpp.obj: ../src/libc-stub.cpp
 
 CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj: C:/ti-software/R2D2/Build-environment/libraries/hwlib/library/hwlib.hpp
 CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj: ../src/main.cpp
+CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj: ../src/moving-platform.hpp
 CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj: ../src/wrap-hwlib.hpp
+
+CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj: C:/ti-software/R2D2/Build-environment/libraries/hwlib/library/hwlib.hpp
+CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj: ../src/moving-platform.CPP
+CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj: ../src/moving-platform.hpp
+CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj: ../src/wrap-hwlib.hpp
 
 CMakeFiles/arduino-template.elf.dir/src/wrap-hwlib.cpp.obj: C:/ti-software/R2D2/Build-environment/libraries/hwlib/library/hwlib.hpp
 CMakeFiles/arduino-template.elf.dir/src/wrap-hwlib.cpp.obj: ../src/wrap-hwlib.cpp

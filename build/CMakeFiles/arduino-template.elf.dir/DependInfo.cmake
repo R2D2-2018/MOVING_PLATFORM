@@ -28,6 +28,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/src/libc-stub.cpp" "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/arduino-template.elf.dir/src/libc-stub.cpp.obj"
   "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/src/main.cpp" "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj"
+  "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/src/moving-platform.CPP" "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj"
   "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/src/wrap-hwlib.cpp" "C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build/CMakeFiles/arduino-template.elf.dir/src/wrap-hwlib.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

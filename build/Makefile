@@ -243,6 +243,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/arduino-template.elf.dir/build.make CMakeFiles/arduino-template.elf.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/moving-platform.obj: src/moving-platform.CPP.obj
+
+.PHONY : src/moving-platform.obj
+
+# target to build an object file
+src/moving-platform.CPP.obj:
+	$(MAKE) -f CMakeFiles/arduino-template.elf.dir/build.make CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj
+.PHONY : src/moving-platform.CPP.obj
+
+src/moving-platform.i: src/moving-platform.CPP.i
+
+.PHONY : src/moving-platform.i
+
+# target to preprocess a source file
+src/moving-platform.CPP.i:
+	$(MAKE) -f CMakeFiles/arduino-template.elf.dir/build.make CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.i
+.PHONY : src/moving-platform.CPP.i
+
+src/moving-platform.s: src/moving-platform.CPP.s
+
+.PHONY : src/moving-platform.s
+
+# target to generate assembly for a file
+src/moving-platform.CPP.s:
+	$(MAKE) -f CMakeFiles/arduino-template.elf.dir/build.make CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.s
+.PHONY : src/moving-platform.CPP.s
+
 src/wrap-hwlib.obj: src/wrap-hwlib.cpp.obj
 
 .PHONY : src/wrap-hwlib.obj
@@ -291,6 +318,9 @@ help:
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/moving-platform.obj"
+	@echo "... src/moving-platform.i"
+	@echo "... src/moving-platform.s"
 	@echo "... src/wrap-hwlib.obj"
 	@echo "... src/wrap-hwlib.i"
 	@echo "... src/wrap-hwlib.s"

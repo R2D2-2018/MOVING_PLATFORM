@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/arduino-template.elf.dir/src/wrap-hwlib.cpp.obj"
   "CMakeFiles/arduino-template.elf.dir/src/libc-stub.cpp.obj"
   "CMakeFiles/arduino-template.elf.dir/src/main.cpp.obj"
+  "CMakeFiles/arduino-template.elf.dir/src/moving-platform.CPP.obj"
   "arduino-template.elf.pdb"
   "arduino-template.elf"
   "arduino-template.elf.manifest"
