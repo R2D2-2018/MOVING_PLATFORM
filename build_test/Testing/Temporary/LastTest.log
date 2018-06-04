@@ -1,0 +1,74 @@
+Start testing: Jun 03 20:02 W. Europe Daylight Time
+----------------------------------------------------------
+1/3 Testing: build_test
+1/3 Test: build_test
+Command: "C:/Program Files/CMake/bin/cmake.exe" "--build" "."
+Directory: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build_test
+"build_test" start time: Jun 03 20:02 W. Europe Daylight Time
+Output:
+----------------------------------------------------------
+Scanning dependencies of target unit_test
+[ 50%] Building CXX object CMakeFiles/unit_test.dir/test/test_main.cpp.obj
+[100%] Linking CXX executable unit_test
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2ab33): undefined reference to `MovingPlatform::Platform::Platform()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2ab47): undefined reference to `MovingPlatform::Platform::setOffset(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2ab5e): undefined reference to `MovingPlatform::Platform::setSmoothing(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2ab75): undefined reference to `MovingPlatform::Platform::setWheelSize(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2ac3f): undefined reference to `MovingPlatform::Platform::getOffset()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2adad): undefined reference to `MovingPlatform::Platform::getSmoothing()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2af1b): undefined reference to `MovingPlatform::Platform::getWheelSize()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2afe0): undefined reference to `MovingPlatform::Platform::setOffset(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2aff7): undefined reference to `MovingPlatform::Platform::setSmoothing(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2b00e): undefined reference to `MovingPlatform::Platform::setWheelSize(short)'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2b0d8): undefined reference to `MovingPlatform::Platform::getOffset()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2b243): undefined reference to `MovingPlatform::Platform::getSmoothing()'
+CMakeFiles/unit_test.dir/test/test_main.cpp.obj:test_main.cpp:(.text+0x2b384): undefined reference to `MovingPlatform::Platform::getWheelSize()'
+C:/TDM-GCC-32/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: CMakeFiles/unit_test.dir/test/test_main.cpp.obj: bad reloc address 0x48 in section `.data'
+C:/TDM-GCC-32/bin/../lib/gcc/mingw32/5.1.0/../../../../mingw32/bin/ld.exe: final link failed: Invalid operation
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\unit_test.dir\build.make:82: recipe for target 'unit_test' failed
+mingw32-make.exe[2]: *** [unit_test] Error 1
+CMakeFiles\Makefile2:962: recipe for target 'CMakeFiles/unit_test.dir/all' failed
+mingw32-make.exe[1]: *** [CMakeFiles/unit_test.dir/all] Error 2
+Makefile:93: recipe for target 'all' failed
+mingw32-make.exe: *** [all] Error 2
+<end of output>
+Test time =  19.92 sec
+----------------------------------------------------------
+Test Failed.
+"build_test" end time: Jun 03 20:02 W. Europe Daylight Time
+"build_test" time elapsed: 00:00:19
+----------------------------------------------------------
+
+Unable to find executable: ./unit_test
+2/3 Testing: unit_test
+2/3 Test: unit_test
+Command: ""
+Directory: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM/build_test
+"unit_test" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"unit_test" end time: Jun 03 20:02 W. Europe Daylight Time
+"unit_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: complexity_test
+3/3 Test: complexity_test
+Command: "C:/Program Files/Python36/Scripts/lizard.exe" "-C" "10" "--warnings_only" "."
+Directory: C:/ti-software/R2D2/Build-environment/modules/MOVING_PLATFORM
+"complexity_test" start time: Jun 03 20:02 W. Europe Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.70 sec
+----------------------------------------------------------
+Test Passed.
+"complexity_test" end time: Jun 03 20:02 W. Europe Daylight Time
+"complexity_test" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Jun 03 20:02 W. Europe Daylight Time
