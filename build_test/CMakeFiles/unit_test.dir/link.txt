@@ -1,1 +1,0 @@
-C:\TDM-GCC-32\bin\g++.exe    -std=c++14   CMakeFiles/unit_test.dir/test/test_main.cpp.obj  -o unit_test -lgcc 
