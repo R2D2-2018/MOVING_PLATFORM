@@ -1,4 +1,4 @@
-#include "moving-platform.hpp"
+#include "moving_platform.hpp"
 #include "wrap-hwlib.hpp"
 namespace MovingPlatform {
 // Platform(? & leftMotor, ? & rightMotor):

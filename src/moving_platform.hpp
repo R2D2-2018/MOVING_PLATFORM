@@ -1,5 +1,5 @@
 /**
- * @file moving-platform.hpp
+ * @file moving_platform.hpp
  * @brief     Moving platform class
  * @author    Olivier verwoerd & Maarten Wassenaar
  * @license   See LICENSE
