@@ -19,7 +19,6 @@ class Platform {
     //? & rightMotor;
     short currentSpeedLeft, currentSpeedRight;
     short wheelsize;
-    short offset;
     short smoothing;
     short speed;
 
@@ -28,8 +27,10 @@ class Platform {
     Platform();
 
     /**
-     * @brief move with turn
+     * @brief moves the platform
      *
+     * Move the platform in *direction* for *distance* amount of cm.
+     * Direction is forward or backward.
      * @param[in] speed in a range 255 to -255
      * @param[in] turn ratio devided by 10
      * @param[out] set speed of motorcontrollers.
@@ -37,54 +38,45 @@ class Platform {
     void move(short speed, short turn);
 
     /**
-     * @brief rotate
+     * @brief rotate the platform
      *
-     * Rotates the platform
+     * Turn the platform a certain angle. The range is between -360 and 360.
      *
      * @param[in] rotation in ##UNDEFINED unless servo than deg.
      * @param[out] set speed of motorcontrollers.
      */
     void rotate(short deg);
+
     /**
-     * @brief rotate
+     * @brief Stops the platform immediately
      *
-     * @param[in] rotation in ##UNDEFINED unless servo than deg.
-     * @param[in] Custom speed. otherwise half speed
-     * @param[out] set speed of motorcontrollers.
-     */
-    void rotate(short deg, short speed);
-    /**
-     * @brief Stop
-     *
-     * Stops the motor without any smoothing.
-     *
-     * @param[out] speed of motors to direct 0;
+     * Stops the motors without any smoothing as quick as possible.
      */
     void emergencyStop();
 
     // SETTERS AND GETTERS
     /**
-     * @brief getWheelSize
+     * @brief getter for WheelSize
      *
      * returns wheelSize as short
      */
     short getWheelSize();
 
     /**
-     * @brief setWheelSize
+     * @brief setter for WheelSize
      *
      * @param[in] set wheelsize in mm
      */
     void setWheelSize(short mm);
     /**
-     * @brief getSmoothing
+     * @brief getter for Smoothing
      *
      * @param[in] set smoothing of motors in second/10.
      */
     void setSmoothing(short value);
 
     /**
-     * @brief setSpeed
+     * @brief setter for Speed
      *
      * @param[in] set speed to new value
      */
@@ -92,7 +84,7 @@ class Platform {
     void setSpeed(short newSpeed);
 
     /**
-     * @brief getSpeed
+     * @brief getter for Speed
      *
      * @return speed
      */
@@ -100,7 +92,7 @@ class Platform {
     short getSpeed();
 
     /**
-     * @brief getSmoothing
+     * @brief getter for Smoothing
      *
      * @return smoothing of motors in second/10.
      */

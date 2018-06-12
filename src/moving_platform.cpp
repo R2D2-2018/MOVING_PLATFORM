@@ -5,7 +5,6 @@ namespace MovingPlatform {
 // leftMotor(leftMotor), rightMotor(rightMotor)
 Platform::Platform() {
     wheelsize = 60;
-    offset = 0;
     smoothing = 15;
 }
 
@@ -17,12 +16,6 @@ void Platform::move(short speed, short turn) {
 
 void Platform::rotate(short deg) {
     if (deg > 360 || deg < -360) {
-        return;
-    }
-}
-
-void Platform::rotate(short deg, short speed) {
-    if (deg > 360 || deg < -360 || speed > 255 || speed < -255) {
         return;
     }
 }
