@@ -70,4 +70,12 @@ short Platform::getSmoothing() {
     return smoothing;
 }
 
+void Platform::setSpeed(short newSpeed) {
+    speed = newSpeed;
+}
+
+short Platform::getSpeed() {
+    return speed;
+}
+
 } // namespace MovingPlatform

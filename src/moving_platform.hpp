@@ -10,18 +10,18 @@
 
 namespace MovingPlatform {
 /**
- * @brief Platform
+ * @brief Control the motors from the MotorController module.
  * This class communicates with the motorcontroller to control multiple moters
  * With this class a platforms movement can be set with ease
  */
 class Platform {
-    /// This is designed to break. waiting for motorcontroller to
     //? & leftMotor;
     //? & rightMotor;
     short currentSpeedLeft, currentSpeedRight;
     short wheelsize;
     short offset;
     short smoothing;
+    short speed;
 
   public:
     // Platform(? & leftMotor, ? & rightMotor);
@@ -30,7 +30,6 @@ class Platform {
     void move(short speed);
     /**
      * @brief move with turn
-     *
      *
      * @param[in] speed in a range 255 to -255
      * @param[in] turn ratio devided by 10
@@ -75,6 +74,13 @@ class Platform {
     /**
      * @brief getWheelSize
      *
+     * returns wheelSize as short
+     */
+    short getWheelSize();
+
+    /**
+     * @brief setWheelSize
+     *
      * @param[in] set wheelsize in mm
      */
     void setWheelSize(short mm);
@@ -90,12 +96,23 @@ class Platform {
      * @param[in] set smoothing of motors in second/10.
      */
     void setSmoothing(short value);
+
     /**
-     * @brief getWheelSize
+     * @brief setSpeed
      *
-     * @return wheelsize in mm
+     * @param[in] set speed to new value
      */
-    short getWheelSize();
+
+    void setSpeed(short newSpeed);
+
+    /**
+     * @brief getSpeed
+     *
+     * @return speed
+     */
+
+    short getSpeed();
+
     /**
      * @brief getOffset
      *
