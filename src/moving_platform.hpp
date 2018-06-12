@@ -27,7 +27,6 @@ class Platform {
     // Platform(? & leftMotor, ? & rightMotor);
     Platform();
 
-    void move(short speed);
     /**
      * @brief move with turn
      *
@@ -36,14 +35,7 @@ class Platform {
      * @param[out] set speed of motorcontrollers.
      */
     void move(short speed, short turn);
-    /**
-     * @brief move a certain distance if motor supports distance
-     *
-     * @param[in] Distance in ##UNDEFINED
-     * @param[in] speed in a range 255 to -255
-     * @param[out] set speed of motorcontrollers.
-     */
-    void moveDistance(short distance, short speed);
+
     /**
      * @brief rotate
      *
@@ -68,7 +60,7 @@ class Platform {
      *
      * @param[out] speed of motors to direct 0;
      */
-    void stop();
+    void emergencyStop();
 
     // SETTERS AND GETTERS
     /**
@@ -84,12 +76,6 @@ class Platform {
      * @param[in] set wheelsize in mm
      */
     void setWheelSize(short mm);
-    /**
-     * @brief getOffset
-     *
-     * @param[in] set offset of motorcontroller in ##UNDEFINED.
-     */
-    void setOffset(short value);
     /**
      * @brief getSmoothing
      *
@@ -113,12 +99,6 @@ class Platform {
 
     short getSpeed();
 
-    /**
-     * @brief getOffset
-     *
-     * @return offset of motorcontroller in ##UNDEFINED.
-     */
-    short getOffset();
     /**
      * @brief getSmoothing
      *
