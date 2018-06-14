@@ -1,0 +1,6 @@
+/
+build/*
+build_test/*
+/.vscode/
+build/CMakeFiles/arduino-template.elf.dir/build.make
+build/CMakeFiles/arduino-template.elf.dir/build.make
