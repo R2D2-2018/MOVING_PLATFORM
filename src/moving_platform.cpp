@@ -14,8 +14,8 @@ void Platform::move(short speed, short turn) {
     }
 }
 
-void Platform::rotate(short deg) {
-    if (deg > 360 || deg < -360) {
+void Platform::rotate(short angle) {
+    if (angle > 360 || angle < -360) {
         return;
     }
 }

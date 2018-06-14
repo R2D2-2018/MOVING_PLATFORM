@@ -31,8 +31,8 @@ class Platform {
      *
      * Move the platform in *direction* for *distance* amount of cm.
      * Direction is forward or backward.
-     * @param[in] speed in a range 255 to -255
-     * @param[in] turn ratio devided by 10
+     * @param[in] speed : the speed the motor has to move at
+     * @param[in] turn : ratio devided by 10
      * @param[out] set speed of motorcontrollers.
      */
     void move(short speed, short turn);
@@ -42,10 +42,10 @@ class Platform {
      *
      * Turn the platform a certain angle. The range is between -360 and 360.
      *
-     * @param[in] rotation in ##UNDEFINED unless servo than deg.
+     * @param[in] angle : the angle the platform has to turn from its current orientation
      * @param[out] set speed of motorcontrollers.
      */
-    void rotate(short deg);
+    void rotate(short angle);
 
     /**
      * @brief Stops the platform immediately
@@ -65,20 +65,20 @@ class Platform {
     /**
      * @brief setter for WheelSize
      *
-     * @param[in] set wheelsize in mm
+     * @param[in] mm : new wheelsize value in millimeters
      */
     void setWheelSize(short mm);
     /**
-     * @brief getter for Smoothing
+     * @brief setter for Smoothing
      *
-     * @param[in] set smoothing of motors in second/10.
+     * @param[in] value : new smoothing value of motors in second/10.
      */
     void setSmoothing(short value);
 
     /**
      * @brief setter for Speed
      *
-     * @param[in] set speed to new value
+     * @param[in] newSpeed : new speed value
      */
 
     void setSpeed(short newSpeed);
