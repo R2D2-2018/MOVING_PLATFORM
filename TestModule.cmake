@@ -2,7 +2,8 @@ include (CTest)
 
 include (${build_environment}/flags.cmake)
 
-include_directories (src/)
+include_directories (src/
+                     modules/MOTOR_CONTROLLER/src/)
 
 add_definitions (-DBMPTK_TARGET_test
                  -DBMPTK_TARGET=test

@@ -1,4 +1,5 @@
 #include "moving_platform.hpp"
+#include "motor_interface.hpp"
 #include "wrap-hwlib.hpp"
 
 int main() {
