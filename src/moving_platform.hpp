@@ -23,6 +23,8 @@ class Platform {
     short speed;
 
   public:
+    enum class Direction { forward, backward };
+
     // Platform(? & leftMotor, ? & rightMotor);
     Platform();
 
@@ -31,11 +33,12 @@ class Platform {
      *
      * Move the platform in *direction* for *distance* amount of cm.
      * Direction is forward or backward.
-     * @param[in] speed : the speed the motor has to move at
-     * @param[in] turn : ratio devided by 10
+     *
+     * @param[in] speed : the speed the motor has to move at, ranged 0 - 255
+     * @param[in] Direction : the direction the motor has to travel, forwards or backwards
      * @param[out] set speed of motorcontrollers.
      */
-    void move(short speed, short turn);
+    void move(const uint8_t &speed, const Direction &direction);
 
     /**
      * @brief rotate the platform

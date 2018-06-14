@@ -8,10 +8,7 @@ Platform::Platform() {
     smoothing = 15;
 }
 
-void Platform::move(short speed, short turn) {
-    if (speed > 255 || speed < -255) {
-        return;
-    }
+void Platform::move(const uint8_t &speed, const Direction &direction) {
 }
 
 void Platform::rotate(short angle) {
