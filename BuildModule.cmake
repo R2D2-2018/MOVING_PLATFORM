@@ -1,5 +1,7 @@
 include (${build_environment}/flags.cmake)
 
+include_directories (modules/MOTOR_CONTROLLER/src/)
+
 set (sources ${sources}
     src/main.cpp
     src/wrap-hwlib.cpp

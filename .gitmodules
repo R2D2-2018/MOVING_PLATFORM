@@ -1,0 +1,3 @@
+[submodule "modules/MOTOR_CONTROLLER"]
+	path = modules/MOTOR_CONTROLLER
+	url = https://github.com/R2D2-2018/MOTOR_CONTROLLER.git
