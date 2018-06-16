@@ -12,4 +12,5 @@ include_directories (${catch}/single_include)
 
 set (sources
     src/moving_platform.cpp
+    modules/MOTOR_CONTROLLER/src/motor_interface.cpp
 )
