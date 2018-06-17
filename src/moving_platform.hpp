@@ -1,7 +1,7 @@
 /**
  * @file moving_platform.hpp
  * @brief     Moving platform class
- * @author    Olivier verwoerd & Maarten Wassenaar
+ * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet & Jasper Smienk.
  * @license   See LICENSE
  */
 #include <stdint.h>
@@ -12,16 +12,17 @@
 namespace MovingPlatform {
 /**
  * @brief Control the motors from the MotorController module.
+ *
  * This class communicates with the motorcontroller to control multiple moters
  * With this class a platforms movement can be set with ease
  */
 class Platform {
     //? & leftMotor;
     //? & rightMotor;
-    short currentSpeedLeft, currentSpeedRight;
-    short wheelsize;
-    short smoothing;
-    short speed;
+    int16_t currentSpeedLeft, currentSpeedRight;
+    int16_t wheelsize;
+    int16_t smoothing;
+    int16_t speed;
 
   public:
     enum class Direction { Forward, Backward };
@@ -32,75 +33,73 @@ class Platform {
     /**
      * @brief moves the platform
      *
-     * Move the platform in *direction* for *distance* amount of cm.
+     * Move the platform in *direction* for *distance* amount of centimeters.
      * Direction is forward or backward.
      *
-     * @param[in] distance the distance the motor has to travel, in cm
-     * @param[in] Direction the direction the motor has to travel, forwards or backwards
+     * @param[in] distance the distance the motor has to travel, in centimeters.
+     * @param[in] Direction the direction the motor has to travel, forwards or backwards.
      * @param[out] set speed of motorcontrollers.
      */
     void move(const uint32_t &distance, const Direction &direction);
 
     /**
-     * @brief rotate the platform
+     * @brief Rotate the platform.
      *
-     * Turn the platform a certain angle. The range is between -360 and 360.
+     * Turn the platform a certain degrees.
      *
-     * @param[in] angle : the angle the platform has to turn from its current orientation
+     * @param[in] angle The angle the platform has to turn from its current orientation.
      * @param[out] set speed of motorcontrollers.
      */
-    void rotate(short angle);
+    void rotate(int16_t angle);
 
     /**
-     * @brief Stops the platform immediately
+     * @brief Stops the platform immediately.
      *
      * Stops the motors without any smoothing as quick as possible.
      */
     void emergencyStop();
 
-    // SETTERS AND GETTERS
     /**
-     * @brief getter for WheelSize
+     * @brief Getter for WheelSize.
      *
-     * returns wheelSize as short
+     * returns Size of wheel in millimeters.
      */
-    short getWheelSize();
+    int16_t getWheelSize();
 
     /**
-     * @brief setter for WheelSize
+     * @brief Setter for WheelSize.
      *
-     * @param[in] mm : new wheelsize value in millimeters
+     * @param[in] newWheelsize New wheelsize value in millimeters.
      */
-    void setWheelSize(short mm);
-    /**
-     * @brief setter for Smoothing
-     *
-     * @param[in] value : new smoothing value of motors in second/10.
-     */
-    void setSmoothing(short value);
+    void setWheelSize(int16_t newWheelsize);
 
     /**
-     * @brief setter for Speed
+     * @brief Setter for Smoothing.
      *
-     * @param[in] newSpeed : new speed value
+     * @param[in] newSmoothing New smoothing value of motors in second/10.
      */
-
-    void setSpeed(short newSpeed);
+    void setSmoothing(int16_t newSmoothing);
 
     /**
-     * @brief getter for Speed
+     * @brief Setter for Speed.
      *
-     * @return speed
+     * @param[in] newSpeed New speed value.
      */
-
-    short getSpeed();
+    void setSpeed(int16_t newSpeed);
 
     /**
-     * @brief getter for Smoothing
+     * @brief Getter for Speed.
      *
-     * @return smoothing of motors in second/10.
+     * @return Current speed of the motor.
      */
-    short getSmoothing();
+    int16_t getSpeed();
+
+    /**
+     * @brief Getter for Smoothing.
+     *
+     * @return Smoothing of motors in second/10.
+     */
+    int16_t getSmoothing();
 };
 } // namespace MovingPlatform
 

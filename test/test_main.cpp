@@ -7,12 +7,16 @@ TEST_CASE("Get and set") {
     MovingPlatform::Platform test;
     test.setSmoothing(10);
     test.setWheelSize(10);
+    test.setSpeed(10);
     REQUIRE(test.getSmoothing() == 10);
     REQUIRE(test.getWheelSize() == 10);
+    REQUIRE(test.getSpeed() == 10);
     test.setSmoothing(2);
     test.setWheelSize(2);
+    test.setSpeed(2);
     REQUIRE(test.getSmoothing() == 2);
     REQUIRE(test.getWheelSize() == 2);
+    REQUIRE(test.getSpeed() == 2);
 }
 
 TEST_CASE("MotorInterface: Default interface") {
