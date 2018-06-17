@@ -22,7 +22,7 @@ void Platform::rotate(int16_t angle) {
 }
 
 void Platform::emergencyStop() {
-    hwlib::cout << "stoping platform right now." << hwlib::endl;
+    hwlib::cout << "stopping platform right now." << hwlib::endl;
 }
 
 void Platform::setWheelSize(int16_t newWheelsize) {
