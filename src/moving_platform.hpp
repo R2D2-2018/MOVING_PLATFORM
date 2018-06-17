@@ -24,7 +24,7 @@ class Platform {
     short speed;
 
   public:
-    enum class Direction { forward, backward };
+    enum class Direction { Forward, Backward };
 
     // Platform(? & leftMotor, ? & rightMotor);
     Platform();
