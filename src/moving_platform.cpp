@@ -1,5 +1,6 @@
 #include "moving_platform.hpp"
 #include "wrap-hwlib.hpp"
+
 namespace MovingPlatform {
 // Platform(? & leftMotor, ? & rightMotor):
 // leftMotor(leftMotor), rightMotor(rightMotor)
@@ -8,9 +9,11 @@ Platform::Platform() {
     smoothing = 15;
 }
 
-void Platform::move(short speed, short turn) {
-    if (speed > 255 || speed < -255) {
-        return;
+void Platform::move(const uint32_t &distance, const Direction &direction) {
+    if (direction == Direction::Forward) {
+        hwlib::cout << "moving forward for " << distance << " cm." << hwlib::endl;
+    } else {
+        hwlib::cout << "moving backwards for " << distance << " cm." << hwlib::endl;
     }
 }
 

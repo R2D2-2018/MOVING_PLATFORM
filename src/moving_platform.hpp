@@ -4,6 +4,7 @@
  * @author    Olivier verwoerd & Maarten Wassenaar
  * @license   See LICENSE
  */
+#include <stdint.h>
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
@@ -23,6 +24,8 @@ class Platform {
     short speed;
 
   public:
+    enum class Direction { Forward, Backward };
+
     // Platform(? & leftMotor, ? & rightMotor);
     Platform();
 
@@ -31,11 +34,12 @@ class Platform {
      *
      * Move the platform in *direction* for *distance* amount of cm.
      * Direction is forward or backward.
-     * @param[in] speed : the speed the motor has to move at
-     * @param[in] turn : ratio devided by 10
+     *
+     * @param[in] distance the distance the motor has to travel, in cm
+     * @param[in] Direction the direction the motor has to travel, forwards or backwards
      * @param[out] set speed of motorcontrollers.
      */
-    void move(short speed, short turn);
+    void move(const uint32_t &distance, const Direction &direction);
 
     /**
      * @brief rotate the platform
