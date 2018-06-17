@@ -4,6 +4,7 @@
  * @author    Olivier verwoerd & Maarten Wassenaar
  * @license   See LICENSE
  */
+#include <stdint.h>
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
@@ -34,11 +35,11 @@ class Platform {
      * Move the platform in *direction* for *distance* amount of cm.
      * Direction is forward or backward.
      *
-     * @param[in] speed : the speed the motor has to move at, ranged 0 - 255
-     * @param[in] Direction : the direction the motor has to travel, forwards or backwards
+     * @param[in] distance the distance the motor has to travel, in cm
+     * @param[in] Direction the direction the motor has to travel, forwards or backwards
      * @param[out] set speed of motorcontrollers.
      */
-    void move(const uint8_t &speed, const Direction &direction);
+    void move(const uint32_t &distance, const Direction &direction);
 
     /**
      * @brief rotate the platform

@@ -1,5 +1,6 @@
 #include "moving_platform.hpp"
 #include "wrap-hwlib.hpp"
+
 namespace MovingPlatform {
 // Platform(? & leftMotor, ? & rightMotor):
 // leftMotor(leftMotor), rightMotor(rightMotor)
@@ -8,7 +9,7 @@ Platform::Platform() {
     smoothing = 15;
 }
 
-void Platform::move(const uint8_t &speed, const Direction &direction) {
+void Platform::move(const uint32_t &distance, const Direction &direction) {
 }
 
 void Platform::rotate(short angle) {
