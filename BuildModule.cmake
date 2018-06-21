@@ -6,6 +6,7 @@ set (sources ${sources}
     src/main.cpp
     src/wrap-hwlib.cpp
     src/libc-stub.cpp
+    src/UART_Lib/hardware_uart.cpp
 )
 
 add_definitions (-DBMPTK_TARGET_arduino_due
