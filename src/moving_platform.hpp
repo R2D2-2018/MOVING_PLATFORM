@@ -1,10 +1,12 @@
 /**
  * @file moving_platform.hpp
  * @brief     Moving platform class
- * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet & Jasper Smienk.
+ * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet, Jasper Smienk & Diego Nijboer.
  * @license   See LICENSE
  */
 #include <stdint.h>
+#include "modules/MOTOR_CONTROLLER/motor_interface.hpp"
+
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
