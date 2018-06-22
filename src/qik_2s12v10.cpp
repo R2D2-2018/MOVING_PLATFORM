@@ -45,11 +45,16 @@ uint8_t Qik2S12V10::setConfigParameter(ConfigParameters parameter, uint8_t value
 void Qik2S12V10::setMotorBrake(uint8_t value, Motors motor) {
     if (motor == Motors::Both) {
         serialConnection.send(0x86);
+        serialConnection.send(value);
+        hwlib::wait_ms(4);
         serialConnection.send(0x87);
+        serialConnection.send(value);
     } else if (motor == Motors::M0) {
         serialConnection.send(0x86);
+        serialConnection.send(value);
     } else {
         serialConnection.send(0x87);
+        serialConnection.send(value);
     }
 }
 
