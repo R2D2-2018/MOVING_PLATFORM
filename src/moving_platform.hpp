@@ -4,7 +4,7 @@
  * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet & Jasper Smienk.
  * @license   See LICENSE
  */
-#include <stdint.h>
+#include "wrap-hwlib.hpp"
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
