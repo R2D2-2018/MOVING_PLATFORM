@@ -12,9 +12,9 @@ int main() {
 
     auto motorCon = Qik2S12V10(serialCon);
 
-    hwlib::cout << static_cast<int>(motorCon.getErrorByte()) << hwlib::endl;
+    motorCon.setConfigParameter(Qik2S12V10::ConfigParameters::DeviceID, 10);
     hwlib::cout << static_cast<int>(motorCon.getConfigParameter(Qik2S12V10::ConfigParameters::DeviceID)) << hwlib::endl;
-    hwlib::cout << static_cast<int>(motorCon.getFirmware()) << hwlib::endl;
+    hwlib::cout << static_cast<int>(motorCon.getErrorByte()) << hwlib::endl;
 
     return 0;
 }

@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief     Interface class for the Qik 2S12V10.
- * @author    Jasper Smienk & Daniel van Vliet.
+ * @author    Jasper Smienk, Daniel van Vliet & Nick Bout.
  * @license   See LICENSE
  */
 
@@ -20,13 +20,13 @@ class Qik2S12V10 {
         ShutdownOnError = 2,               ///< Default: 1
         SerialTimeout = 3,                 ///< Default: 0
         MotorM0Acceleration = 4,           ///< Default: 0
-        MOTORM1ACCELERATION = 5,           ///< Default: 0
-        MOTORM0BRAKEDURATION = 6,          ///< Default: 0
-        MOTORM1BRAKEDURATION = 7,          ///< Default: 0
-        MOTORM0CURRENTLIMIT = 8,           ///< Default: 0
-        MOTORM1CURRENTLIMIT = 9,           ///< Default: 0
-        MOTORM0CURRENT_LIMITRESPONSE = 10, ///< Default: 4
-        MOTORM1CURRENT_LIMITRESPONSE = 11  ///< Default: 4
+        MotorM1Acceleration = 5,           ///< Default: 0
+        MotorM0BrakeDuration = 6,          ///< Default: 0
+        MotorM1BrakeDuration = 7,          ///< Default: 0
+        MotorM0CurrentLimit = 8,           ///< Default: 0
+        MotorM1CurrentLimit = 9,           ///< Default: 0
+        MotorM0CurrentLimitResponse = 10, ///< Default: 4
+        MotorM1CurrentLimitResponse = 11  ///< Default: 4
     };
 
     enum class Motors { M0, M1, Both };
