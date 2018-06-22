@@ -147,6 +147,6 @@ class UARTConnection : public hwlib::ostream, public hwlib::istream {
     virtual inline uint8_t receiveByte() = 0;
 };
 
-}
+} // namespace UARTLib
 
 #endif
