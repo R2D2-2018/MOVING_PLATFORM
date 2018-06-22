@@ -15,16 +15,16 @@
 class Qik2S12V10 {
   public:
     enum class ConfigParameters {
-        DeviceID = 0,                      ///< Default: 10
-        PWMParameter = 1,                  ///< Default: 0
-        ShutdownOnError = 2,               ///< Default: 1
-        SerialTimeout = 3,                 ///< Default: 0
-        MotorM0Acceleration = 4,           ///< Default: 0
-        MotorM1Acceleration = 5,           ///< Default: 0
-        MotorM0BrakeDuration = 6,          ///< Default: 0
-        MotorM1BrakeDuration = 7,          ///< Default: 0
-        MotorM0CurrentLimit = 8,           ///< Default: 0
-        MotorM1CurrentLimit = 9,           ///< Default: 0
+        DeviceID = 0,                     ///< Default: 10
+        PWMParameter = 1,                 ///< Default: 0
+        ShutdownOnError = 2,              ///< Default: 1
+        SerialTimeout = 3,                ///< Default: 0
+        MotorM0Acceleration = 4,          ///< Default: 0
+        MotorM1Acceleration = 5,          ///< Default: 0
+        MotorM0BrakeDuration = 6,         ///< Default: 0
+        MotorM1BrakeDuration = 7,         ///< Default: 0
+        MotorM0CurrentLimit = 8,          ///< Default: 0
+        MotorM1CurrentLimit = 9,          ///< Default: 0
         MotorM0CurrentLimitResponse = 10, ///< Default: 4
         MotorM1CurrentLimitResponse = 11  ///< Default: 4
     };
@@ -33,6 +33,19 @@ class Qik2S12V10 {
 
   private:
     UARTLib::UARTConnection &serialConnection;
+
+    /**
+     * @brief Sends 2 bytes, returns uint8_t.
+     *
+     * This method is used by getMotorSpeed and getMotorCurrent, because they differ only in the command they send.
+     * Depending on which Motors enum is given it returns information of one of the two motors. If both motors are selected it
+     * returns the average.
+     *
+     * @param[in]   motor   Which motor you want to change.
+     * @param[in]   command1   The command used by Qik.
+     * @return byte information: either of one of the motors, or average of the two.
+     */
+    uint8_t getMotorInformation(Motors motor, uint8_t command1);
 
   public:
     /**
