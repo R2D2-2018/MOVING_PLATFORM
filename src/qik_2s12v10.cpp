@@ -54,31 +54,11 @@ void Qik2S12V10::setMotorBrake(uint8_t value, Motors motor) {
 }
 
 void Qik2S12V10::setMotorForward(uint8_t speed, Motors motor) {
-    uint8_t data[] = {0x88, speed};
-    if (motor == Motors::Both) {
-        serialConnection.send(data, 2);
-        data[0] = 0x8C;
-        serialConnection.send(data, 2);
-    } else if (motor == Motors::M0) {
-        serialConnection.send(data, 2);
-    } else {
-        data[0] = 0x8C;
-        serialConnection.send(data, 2);
-    }
+    setMotorData(speed, motor, 0x88, 0x8C);
 }
 
 void Qik2S12V10::setMotorReverse(uint8_t speed, Motors motor) {
-    uint8_t data[] = {0x8A, speed};
-    if (motor == Motors::Both) {
-        serialConnection.send(data, 2);
-        data[0] = 0x8E;
-        serialConnection.send(data, 2);
-    } else if (motor == Motors::M0) {
-        serialConnection.send(data, 2);
-    } else {
-        data[0] = 0x8E;
-        serialConnection.send(data, 2);
-    }
+    setMotorData(speed, motor, 0x8A, 0x8E);
 }
 
 uint8_t Qik2S12V10::getMotorCurrent(Motors motor) {
@@ -110,4 +90,21 @@ uint8_t Qik2S12V10::getMotorInformation(Motors motor, uint8_t command1) {
     while ((serialConnection.available() == 0) && (hwlib::now_us() < timeout)) {
     }
     return serialConnection.receive();
+}
+
+void Qik2S12V10::setMotorData(uint8_t speed, Motors motor, uint8_t command1, uint8_t command2) {
+    if (speed > 127) {
+        speed = 127;
+    }
+    uint8_t data[] = {command1, speed};
+    if (motor == Motors::Both) {
+        serialConnection.send(data, 2);
+        data[0] = command2;
+        serialConnection.send(data, 2);
+    } else if (motor == Motors::M0) {
+        serialConnection.send(data, 2);
+    } else {
+        data[0] = command2;
+        serialConnection.send(data, 2);
+    }
 }

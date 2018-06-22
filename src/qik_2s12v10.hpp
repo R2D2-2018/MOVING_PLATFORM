@@ -47,6 +47,21 @@ class Qik2S12V10 {
      */
     uint8_t getMotorInformation(Motors motor, uint8_t command1);
 
+    /**
+     * @brief Move motor forwards or backwards.
+     *
+     * Set the motor to move forwards or backwards with a given speed.
+     * The resolution is between 0 and 127.
+     * The given Motors enum determines which motor(s) is controlled,
+     * forwards or backwards is determined by the commands passed.
+     *
+     * @param[in]   speed   Speed to set the motor two.
+     * @param[in]   motor   Which motor you want to change.
+     * @param[in]   command1   Command for motor1, either 0x88 (forward motor 1) or 0x8A (backwards motor 1).
+     * @param[in]   command2   Command for motor2, either 0x8C (forward motor 2) or 0x8E (backwards motor 2).
+     */
+    void setMotorData(uint8_t speed, Motors motor, uint8_t command1, uint8_t command2);
+
   public:
     /**
      * @brief Constructor for Qik motor controller.
