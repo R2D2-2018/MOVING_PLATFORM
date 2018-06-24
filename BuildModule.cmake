@@ -1,4 +1,16 @@
-include (../../flags.cmake)
+include (${build_environment}/flags.cmake)
+
+include_directories (modules/MOTOR_CONTROLLER/src/)
+
+set (sources ${sources}
+    src/main.cpp
+    src/wrap-hwlib.cpp
+    src/libc-stub.cpp
+)
+
+add_definitions (-DBMPTK_TARGET_arduino_due
+                 -DBMPTK_TARGET=arduino_due
+                 -DBMPTK_BAUDRATE=19200)
 
 set (cxxflags
     "-Os"
