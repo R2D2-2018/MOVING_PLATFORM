@@ -31,9 +31,25 @@ class Qik2S12V10 {
 
     enum class Motors { M0, M1, Both };
 
+    enum class Command {
+        GetFirmwareVersion = 0x81,
+        GetErrorByte = 0x82,
+        GetConfigParameter = 0x83,
+        SetConfigParameter = 0x84,
+        BrakeMotorM0 = 0x86,
+        BrakeMotorM1 = 0x87,
+        ForwardMotorM0 = 0x88,
+        ReverseMotorM0 = 0x8A,
+        ForwardMotorM1 = 0x8C,
+        ReverseMotorM1 = 0x8E,
+        GetMotorM0Current = 0x90,
+        GetMotorM1Current = 0x91,
+        GetMotorM0Speed = 0x92,
+        GetMotorM1Speed = 0x93
+    };
+
   private:
     UARTLib::UARTConnection &serialConnection;
-
     /**
      * @brief Sends 2 bytes, returns uint8_t.
      *

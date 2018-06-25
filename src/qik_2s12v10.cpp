@@ -1,11 +1,11 @@
 #include "qik_2s12v10.hpp"
 
 Qik2S12V10::Qik2S12V10(UARTLib::UARTConnection &serialConnection) : serialConnection(serialConnection) {
-    serialConnection.send(0xAA);
+    serialConnection.send(0xAA); // this command automaticly sets the baudrate on the motorcontroller
 }
 
 uint8_t Qik2S12V10::getFirmware() {
-    serialConnection.send(0x81); ///< 0x81 is the get firmware version command.
+    serialConnection.send(static_cast<uint8_t>(Command::GetFirmwareVersion)); ///< 0x81 is the get firmware version command.
     auto timeout = hwlib::now_us() + 10000;
     while ((serialConnection.available() == 0) && (hwlib::now_us() < timeout)) {
     }
@@ -13,7 +13,7 @@ uint8_t Qik2S12V10::getFirmware() {
 }
 
 uint8_t Qik2S12V10::getErrorByte() {
-    serialConnection.send(0x82); ///< 0x82 is the get error byte command.
+    serialConnection.send(static_cast<uint8_t>(Command::GetErrorByte)); ///< 0x82 is the get error byte command.
     auto timeout = hwlib::now_us() + 10000;
     while ((serialConnection.available() == 0) && (hwlib::now_us() < timeout)) {
     }
@@ -21,7 +21,7 @@ uint8_t Qik2S12V10::getErrorByte() {
 }
 
 uint8_t Qik2S12V10::getConfigParameter(ConfigParameters parameter) {
-    uint8_t data[] = {0x83, static_cast<uint8_t>(parameter)};
+    uint8_t data[] = {static_cast<uint8_t>(Command::GetConfigParameter), static_cast<uint8_t>(parameter)};
     serialConnection.send(data, 2);
     auto timeout = hwlib::now_us() + 10000;
     while ((serialConnection.available() == 0) && (hwlib::now_us() < timeout)) {
@@ -30,7 +30,8 @@ uint8_t Qik2S12V10::getConfigParameter(ConfigParameters parameter) {
 }
 
 uint8_t Qik2S12V10::setConfigParameter(ConfigParameters parameter, uint8_t value) {
-    uint8_t data[] = {0x84, static_cast<uint8_t>(parameter), value, 0x55, 0x2A};
+    uint8_t data[] = {static_cast<uint8_t>(Command::SetConfigParameter), static_cast<uint8_t>(parameter), value, 0x55,
+                      0x2A}; // 0x55 and 0x2A are required to prevent accidental setting of this command.
     serialConnection.send(data, 5);
     auto timeout = hwlib::now_us() + 10000;
     while ((serialConnection.available() == 0) && (hwlib::now_us() < timeout)) {
@@ -40,29 +41,29 @@ uint8_t Qik2S12V10::setConfigParameter(ConfigParameters parameter, uint8_t value
 
 void Qik2S12V10::setMotorBrake(uint8_t value, Motors motor) {
     if (motor == Motors::Both || motor == Motors::M0) {
-        serialConnection.send(0x86);
+        serialConnection.send(static_cast<uint8_t>(Command::BrakeMotorM0));
         serialConnection.send(value);
     }
     if (motor == Motors::Both || motor == Motors::M1) {
-        serialConnection.send(0x87);
+        serialConnection.send(static_cast<uint8_t>(Command::BrakeMotorM1));
         serialConnection.send(value);
     }
 }
 
 void Qik2S12V10::setMotorForward(uint8_t speed, Motors motor) {
-    setMotorData(speed, motor, 0x88, 0x8C);
+    setMotorData(speed, motor, static_cast<uint8_t>(Command::ForwardMotorM0), static_cast<uint8_t>(Command::ForwardMotorM1));
 }
 
 void Qik2S12V10::setMotorReverse(uint8_t speed, Motors motor) {
-    setMotorData(speed, motor, 0x8A, 0x8E);
+    setMotorData(speed, motor, static_cast<uint8_t>(Command::ReverseMotorM0), static_cast<uint8_t>(Command::ReverseMotorM1));
 }
 
 uint8_t Qik2S12V10::getMotorCurrent(Motors motor) {
-    return getMotorInformation(motor, 0x90);
+    return getMotorInformation(motor, static_cast<uint8_t>(Command::GetMotorM0Current));
 }
 
 uint8_t Qik2S12V10::getMotorSpeed(Motors motor) {
-    return getMotorInformation(motor, 0x92);
+    return getMotorInformation(motor, static_cast<uint8_t>(Command::GetMotorM0Speed));
 }
 
 uint8_t Qik2S12V10::getMotorInformation(Motors motor, uint8_t command) {
