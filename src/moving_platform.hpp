@@ -4,6 +4,8 @@
  * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet & Jasper Smienk.
  * @license   See LICENSE
  */
+#include "qik_2s12v10.hpp"
+#include "uart_lib.hpp"
 #include "wrap-hwlib.hpp"
 
 #ifndef MOVING_PLATFORM_HPP
@@ -17,18 +19,33 @@ namespace MovingPlatform {
  * With this class a platforms movement can be set with ease
  */
 class Platform {
-    //? & leftMotor;
-    //? & rightMotor;
+  private:
+    UARTLib::UARTConnection &serialCon;
+    Qik2S12V10 motorController;
+    hwlib::pin_in &hallSensorPinA;
+    hwlib::pin_in &hallSensorPinB;
+
     int16_t currentSpeedLeft, currentSpeedRight;
     int16_t wheelsize;
     int16_t smoothing;
     int16_t speed;
+    static constexpr uint32_t rotationsPerDegree = 24;
+    static constexpr uint8_t radiusMm = 62;
+    static constexpr uint16_t circumferenceMm = 2 * 3.14159265359 * radiusMm;
+    static constexpr uint16_t umPerDegree = (circumferenceMm * 1000) / 360;
+    static constexpr uint16_t countsPerRotation = 3200;
 
   public:
     enum class Direction { Forward, Backward };
 
-    // Platform(? & leftMotor, ? & rightMotor);
-    Platform();
+  private:
+    void movePlatformForward(int32_t distanceMilliMeters);
+    void movePlatformBackward(int32_t distanceMilliMeters);
+    void waitUntilRotations(int32_t rotations);
+    void caclulateNewCount(const int32_t &newA, const int32_t &newB, const int32_t &previousA, int32_t &count);
+
+  public:
+    Platform(UARTLib::UARTConnection &serialCon, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB);
 
     /**
      * @brief moves the platform

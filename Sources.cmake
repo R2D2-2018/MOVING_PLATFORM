@@ -16,5 +16,6 @@ include_directories (${uart_lib}/src)
 set (sources
     src/moving_platform.cpp
     ${uart_lib}/src/mock_uart.cpp
+    ${uart_lib}/src/uart_connection.cpp
     src/qik_2s12v10.cpp
 )
