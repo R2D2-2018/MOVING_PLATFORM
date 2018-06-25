@@ -2,9 +2,7 @@
 #include "wrap-hwlib.hpp"
 
 namespace MovingPlatform {
-// Platform(? & leftMotor, ? & rightMotor):
-// leftMotor(leftMotor), rightMotor(rightMotor)
-Platform::Platform() {
+Platform::Platform(UARTLib::UARTConnection &serialCon) : serialCon(serialCon), motorController(Qik2S12V10(serialCon)) {
     wheelsize = 60;
     smoothing = 15;
 }

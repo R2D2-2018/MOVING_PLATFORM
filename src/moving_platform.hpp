@@ -4,7 +4,9 @@
  * @author    Olivier verwoerd, Maarten Wassenaar, Daniel van Vliet & Jasper Smienk.
  * @license   See LICENSE
  */
+#include "qik_2s12v10.hpp"
 #include "wrap-hwlib.hpp"
+#include "uart_lib.hpp"
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
@@ -17,8 +19,8 @@ namespace MovingPlatform {
  * With this class a platforms movement can be set with ease
  */
 class Platform {
-    //? & leftMotor;
-    //? & rightMotor;
+    UARTLib::UARTConnection& serialCon;
+    Qik2S12V10 motorController;
     int16_t currentSpeedLeft, currentSpeedRight;
     int16_t wheelsize;
     int16_t smoothing;
@@ -27,8 +29,7 @@ class Platform {
   public:
     enum class Direction { Forward, Backward };
 
-    // Platform(? & leftMotor, ? & rightMotor);
-    Platform();
+    Platform(UARTLib::UARTConnection &serialCon);
 
     /**
      * @brief moves the platform
