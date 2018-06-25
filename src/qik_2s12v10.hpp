@@ -8,7 +8,7 @@
 #ifndef QIK_2S12V10_H
 #define QIK_2S12V10_H
 
-#include "UART_Lib/uart_lib.hpp"
+#include "uart_lib.hpp"
 #include "wrap-hwlib.hpp"
 #include <stdint.h>
 
