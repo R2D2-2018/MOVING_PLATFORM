@@ -5,8 +5,8 @@
  * @license   See LICENSE
  */
 #include "qik_2s12v10.hpp"
-#include "wrap-hwlib.hpp"
 #include "uart_lib.hpp"
+#include "wrap-hwlib.hpp"
 
 #ifndef MOVING_PLATFORM_HPP
 #define MOVING_PLATFORM_HPP
@@ -19,7 +19,7 @@ namespace MovingPlatform {
  * With this class a platforms movement can be set with ease
  */
 class Platform {
-    UARTLib::UARTConnection& serialCon;
+    UARTLib::UARTConnection &serialCon;
     Qik2S12V10 motorController;
     int16_t currentSpeedLeft, currentSpeedRight;
     int16_t wheelsize;
