@@ -10,11 +10,9 @@ Platform::Platform(UARTLib::UARTConnection &serialCon, hwlib::pin_in &hallSensor
 
 void Platform::move(const uint32_t &distance, const Direction &direction) {
     if (direction == Direction::Forward) {
-        // hwlib::cout << "moving forward for " << distance << " cm." << hwlib::endl;
-        movePlatformForward(distance * 1000);
+        movePlatformForward(distance * 10);
     } else {
-        // hwlib::cout << "moving backwards for " << distance << " cm." << hwlib::endl;
-        movePlatformBackward(distance * 1000);
+        movePlatformBackward(distance * 10);
     }
 }
 
