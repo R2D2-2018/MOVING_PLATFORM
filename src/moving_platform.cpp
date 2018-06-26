@@ -59,14 +59,14 @@ int16_t Platform::getSpeed() {
 }
 
 void Platform::movePlatformForward(int32_t distanceMilliMeters) {
-    motorController.setMotorForward(20);
+    motorController.setMotorForward(40);
     uint16_t degrees = (distanceMilliMeters * 1000) / umPerDegree;
     waitUntilRotations(degrees * (countsPerRotation / 360));
     motorController.setMotorForward(0);
 }
 
 void Platform::movePlatformBackward(int32_t distanceMilliMeters) {
-    motorController.setMotorReverse(20);
+    motorController.setMotorReverse(40);
     int16_t degrees = -(distanceMilliMeters * 1000) / umPerDegree;
     waitUntilRotations(degrees * (countsPerRotation / 360));
     motorController.setMotorReverse(0);
@@ -75,10 +75,10 @@ void Platform::movePlatformBackward(int32_t distanceMilliMeters) {
 void Platform::waitUntilRotations(int32_t rotations) {
 
     int32_t count = 0;
-    int32_t previousA = hallSensorPinA.get();
-    int32_t previousB = hallSensorPinB.get();
-    int32_t newA = 0;
-    int32_t newB = 0;
+    int8_t previousA = hallSensorPinA.get();
+    int8_t previousB = hallSensorPinB.get();
+    int8_t newA = 0;
+    int8_t newB = 0;
 
     while (rotations > 0 ? (count < rotations) : (count > rotations)) {
         newA = hallSensorPinA.get();
@@ -95,7 +95,7 @@ void Platform::waitUntilRotations(int32_t rotations) {
     }
 }
 
-void Platform::caclulateNewCount(const int32_t &newA, const int32_t &newB, const int32_t &previousA, int32_t &count) {
+void Platform::caclulateNewCount(const int8_t &newA, const int8_t &newB, const int8_t &previousA, int32_t &count) {
     if (newA != previousA) {
         if (newA == 1) {
             if (newB == 0) {
