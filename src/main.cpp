@@ -15,7 +15,7 @@ int main() {
     auto hallSensorPinB = hwlib::target::pin_in(hwlib::target::pins::d7);
 
     MovingPlatform::Platform platform(serialCon, hallSensorPinA, hallSensorPinB);
-    platform.move(10, MovingPlatform::Platform::Direction::Forward);
+    platform.rotate(360);
     while (true) {
         if (bluetoothConnection.available() > 0) {
             const auto data = bluetoothConnection.receive();
@@ -27,6 +27,7 @@ int main() {
                 break;
             case 'B':
                 hwlib::cout << "Motor backward" << hwlib::endl;
+                platform.move()
                 break;
             case 'R':
                 hwlib::cout << "Motor turn right" << hwlib::endl;

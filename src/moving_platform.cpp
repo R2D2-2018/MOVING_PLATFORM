@@ -17,11 +17,21 @@ void Platform::move(const uint32_t &distance, const Direction &direction) {
 }
 
 void Platform::rotate(int16_t angle) {
-    hwlib::cout << "rotating platform with  " << angle << " degrees." << hwlib::endl;
+    if (angle > 0) {
+        motorController.setMotorForward(20, Qik2S12V10::Motors::M1);
+        motorController.setMotorReverse(20, Qik2S12V10::Motors::M0);
+        waitUntilRotations(angle * rotationsPerDegree);
+    } else {
+        motorController.setMotorForward(20, Qik2S12V10::Motors::M0);
+        motorController.setMotorReverse(20, Qik2S12V10::Motors::M1);
+        waitUntilRotations(angle * rotationsPerDegree);
+    }
+    motorController.setMotorForward(0);
+    motorController.getMotorSpeed(Qik2S12V10::Motors::M0);
 }
 
 void Platform::emergencyStop() {
-    hwlib::cout << "stopping platform right now." << hwlib::endl;
+    motorController.setMotorForward(0);
 }
 
 void Platform::setWheelSize(int16_t newWheelsize) {
@@ -51,7 +61,6 @@ int16_t Platform::getSpeed() {
 void Platform::movePlatformForward(int32_t distanceMilliMeters) {
     motorController.setMotorForward(20);
     uint16_t degrees = (distanceMilliMeters * 1000) / umPerDegree;
-    // hwlib::cout << "moving the motor " << int(degrees) << " degrees" << hwlib::endl;
     waitUntilRotations(degrees * (countsPerRotation / 360));
     motorController.setMotorForward(0);
 }
