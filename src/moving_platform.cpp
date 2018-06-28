@@ -2,9 +2,9 @@
 #include "wrap-hwlib.hpp"
 
 namespace MovingPlatform {
-Platform::Platform(UARTLib::UARTConnection &serialCon, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB)
-    : serialCon(serialCon), motorController(Qik2S12V10(serialCon)), hallSensorPinA(hallSensorPinA), hallSensorPinB(hallSensorPinB) {
-    wheelsize = 60;
+Platform::Platform(UARTLib::UARTConnection &serialConnection, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB)
+    : serialConnection(serialConnection), motorController(Qik2S12V10(serialConnection)), hallSensorPinA(hallSensorPinA), hallSensorPinB(hallSensorPinB) {
+    wheelSize = 60;
     smoothing = 15;
 }
 
@@ -35,7 +35,7 @@ void Platform::emergencyStop() {
 }
 
 void Platform::setWheelSize(int16_t newWheelsize) {
-    wheelsize = newWheelsize;
+    wheelSize = newWheelsize;
 }
 
 void Platform::setSmoothing(int16_t newSmoothing) {
@@ -43,7 +43,7 @@ void Platform::setSmoothing(int16_t newSmoothing) {
 }
 
 int16_t Platform::getWheelSize() {
-    return wheelsize;
+    return wheelSize;
 }
 
 int16_t Platform::getSmoothing() {
@@ -58,16 +58,16 @@ int16_t Platform::getSpeed() {
     return speed;
 }
 
-void Platform::movePlatformForward(int32_t distanceMilliMeters) {
+void Platform::movePlatformForward(int32_t distanceMillimeters) {
     motorController.setMotorForward(40);
-    uint16_t degrees = (distanceMilliMeters * 1000) / umPerDegree;
+    uint16_t degrees = (distanceMillimeters * 1000) / umPerDegree;
     waitUntilRotations(degrees * (countsPerRotation / 360));
     motorController.setMotorForward(0);
 }
 
-void Platform::movePlatformBackward(int32_t distanceMilliMeters) {
+void Platform::movePlatformBackward(int32_t distanceMillimeters) {
     motorController.setMotorReverse(40);
-    int16_t degrees = -(distanceMilliMeters * 1000) / umPerDegree;
+    int16_t degrees = -(distanceMillimeters * 1000) / umPerDegree;
     waitUntilRotations(degrees * (countsPerRotation / 360));
     motorController.setMotorReverse(0);
 }
