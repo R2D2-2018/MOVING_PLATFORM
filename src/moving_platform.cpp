@@ -3,7 +3,8 @@
 
 namespace MovingPlatform {
 Platform::Platform(UARTLib::UARTConnection &serialConnection, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB)
-    : serialConnection(serialConnection), motorController(Qik2S12V10(serialConnection)), hallSensorPinA(hallSensorPinA), hallSensorPinB(hallSensorPinB) {
+    : serialConnection(serialConnection), motorController(Qik2S12V10(serialConnection)), hallSensorPinA(hallSensorPinA),
+      hallSensorPinB(hallSensorPinB) {
     wheelSize = 60;
     smoothing = 15;
 }
