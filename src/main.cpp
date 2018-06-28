@@ -8,13 +8,13 @@ int main() {
 
     hwlib::wait_ms(1000);
 
-    UARTLib::HardwareUART serialCon(115200, UARTLib::UARTController::TWO);
+    UARTLib::HardwareUART serialConnection(115200, UARTLib::UARTController::TWO);
     UARTLib::HardwareUART bluetoothConnection(9600, UARTLib::UARTController::ONE);
 
     auto hallSensorPinA = hwlib::target::pin_in(hwlib::target::pins::d6);
     auto hallSensorPinB = hwlib::target::pin_in(hwlib::target::pins::d7);
 
-    MovingPlatform::Platform platform(serialCon, hallSensorPinA, hallSensorPinB);
+    MovingPlatform::Platform platform(serialConnection, hallSensorPinA, hallSensorPinB);
     while (true) {
         if (bluetoothConnection.available() > 0) {
             const auto data = bluetoothConnection.receive();

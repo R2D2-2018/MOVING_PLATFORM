@@ -20,13 +20,13 @@ namespace MovingPlatform {
  */
 class Platform {
   private:
-    UARTLib::UARTConnection &serialCon;
+    UARTLib::UARTConnection &serialConnection;
     Qik2S12V10 motorController;
     hwlib::pin_in &hallSensorPinA;
     hwlib::pin_in &hallSensorPinB;
 
     int16_t currentSpeedLeft, currentSpeedRight;
-    int16_t wheelsize;
+    int16_t wheelSize;
     int16_t smoothing;
     int16_t speed;
     static constexpr uint32_t rotationsPerDegree = 24;
@@ -42,20 +42,20 @@ class Platform {
     /**
      * @brief Moves the platform forward.
      *
-     * Move the platform forward for *distanceMilliMeters*.
+     * Move the platform forward for *distanceMillimeters*.
      *
-     * @param[in] distanceMilliMeters The amount of millimeters the platform should move.
+     * @param[in] distanceMillimeters The amount of millimeters the platform should move.
      */
-    void movePlatformForward(int32_t distanceMilliMeters);
+    void movePlatformForward(int32_t distanceMillimeters);
 
     /**
      * @brief Moves the platform backward.
      *
-     * Move the platform backward for *distanceMilliMeters*.
+     * Move the platform backward for *distanceMillimeters*.
      *
-     * @param[in] distanceMilliMeters The amount of millimeters the platform should move.
+     * @param[in] distanceMillimeters The amount of millimeters the platform should move.
      */
-    void movePlatformBackward(int32_t distanceMilliMeters);
+    void movePlatformBackward(int32_t distanceMillimeters);
 
     /**
      * @brief Wait until a certain amount of rotations have passed.
@@ -82,7 +82,7 @@ class Platform {
     void caclulateNewCount(const int8_t &newA, const int8_t &newB, const int8_t &previousA, int32_t &count);
 
   public:
-    Platform(UARTLib::UARTConnection &serialCon, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB);
+    Platform(UARTLib::UARTConnection &serialConnection, hwlib::pin_in &hallSensorPinA, hwlib::pin_in &hallSensorPinB);
 
     /**
      * @brief moves the platform
